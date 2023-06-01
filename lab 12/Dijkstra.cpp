@@ -52,15 +52,15 @@ int main(){
                               {5,0,0,20,0,0}
                             };
 
- int source_city=0;
+ int source_city=5;
  vector<int>shortest_time=dijkstra(Adjacency_matrix,source_city);
- int sum=0;
+ double sum=0;
  //print the shotest time from source city to other cities.
  for(int k=0;k<shortest_time.size();k++){
     cout<<"shortest time from city "<<source_city<<" to city "<<k<<" is "<<shortest_time[k]<<endl;
     sum+=shortest_time[k];
  }
- int average_time=sum/(Adjacency_matrix.size()-1);
+  double average_time=sum/(Adjacency_matrix.size()-1);
  cout<<"Average time from city "<<source_city<<" is "<<average_time<<endl;
  return 0;  
 }
